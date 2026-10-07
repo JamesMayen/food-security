@@ -1,0 +1,25 @@
+{
+  "validation_period": "2025-04",
+  "validation_rows": 78,
+  "validation_auc": 0.9763513513513513,
+  "f1_threshold": 0.09999999999999999,
+  "f1": 0.9801324503311258,
+  "precision": 0.961038961038961,
+  "recall": 1.0,
+  "feature_importance": {
+    "start_month": 19.525178268330336,
+    "start_year": 18.504054547102015,
+    "prior_period_phase3plus_pct": 11.761772295190315,
+    "state": 11.37009817725934,
+    "prior_period_ipc_phase": 10.65171071582106,
+    "county": 7.89499222968397,
+    "prior_year_cereal_gap_tonnes": 7.367360235196212,
+    "prior_year_cereal_production_tonnes": 7.129665472743508,
+    "population": 5.795168058673266
+  },
+  "training_rows": 3099,
+  "states": 11,
+  "counties": 79,
+  "positive_rate": 0.7773475314617618,
+  "periods": 39
+}
