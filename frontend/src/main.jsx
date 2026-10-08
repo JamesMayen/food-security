@@ -3,9 +3,6 @@ import {createRoot} from 'react-dom/client';
 import {Activity, AlertTriangle, BarChart3, Check, ChevronDown, ChevronRight, CircleHelp, Database, Download, FileText, Gauge, Map, Menu, Search, ShieldCheck, Target, TrendingUp, Users, X} from 'lucide-react';
 import {Bar, BarChart, CartesianGrid, Cell, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis} from 'recharts';
 import './styles.css';
-import { predictFoodSecurity } from "../services/api";
-
-const result = await predictFoodSecurity(formData);
 
 const API = `${(import.meta.env.VITE_API_URL || 'http://localhost:8000/api').replace(/\/$/, '')}`;
 const NAV = [
