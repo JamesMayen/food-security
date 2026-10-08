@@ -26,7 +26,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://food-security-ss.onrender.com/",
+        "https://food-security-ss.onrender.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
@@ -260,3 +260,7 @@ def submission_data():
             'std': float(s.food_insecurity_risk.std())
         }
     }
+
+# Production frontend calls these paths without the /api prefix.
+for _route in [r for r in app.routes if getattr(r, 'path', '').startswith('/api/')]:
+    app.add_api_route(_route.path[len('/api'):], _route.endpoint, methods=list(_route.methods), include_in_schema=False)
