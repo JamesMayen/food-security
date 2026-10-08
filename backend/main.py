@@ -22,7 +22,16 @@ FEATURES = [
 CATEGORICAL = ['state','county','prior_period_ipc_phase']
 
 app = FastAPI(title='South Sudan Food Security Intelligence API', version='1.0.0')
-app.add_middleware(CORSMiddleware, allow_origins=['*'], allow_credentials=True, allow_methods=['*'], allow_headers=['*'])
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "https://food-security-ss.onrender.com/",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 df = pd.read_csv(DATA)
 submission = pd.read_csv(SUBMISSION)
